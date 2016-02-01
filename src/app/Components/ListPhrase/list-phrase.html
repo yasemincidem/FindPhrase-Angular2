@@ -1,0 +1,29 @@
+<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+  <div class="well" style="margin-top:30px;background-color: #DDC7E8">
+    <form ngForm="searchForm">
+      <input-debounce delay="1000" placeholder="Search..." (value)="searchChanged($event)"></input-debounce>
+    </form>
+  </div>
+  <div *ngIf="lists" class="widget stacked widget-table action-table" >
+    <div class="widget-content">
+      <table class="table table-striped table-bordered" >
+        <thead>
+            <tr >
+                 <th style="text-align: center;background-color:#DDC7E8;">PHRASES IN SPEAKING</th>
+            </tr>
+        </thead>
+        <tbody style="height:300px; overflow-y:scroll;display:block">
+            <tr *ngFor="#item of lists" >
+                 <td style="width: 2000px">{{ item.title }}
+                     <a href="{{item.capitolwords_url}}">
+                        <input type="button" class="btn btn-default"
+                        value="go speaking" style="float: right;background-color:#6E507D ;color:white">
+                      </a>
+                 </td>
+             </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+  <video-phrase  [videoId]="videos" ></video-phrase>
+</div>
