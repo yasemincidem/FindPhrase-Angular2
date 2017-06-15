@@ -1,4 +1,4 @@
-## angular2-LanguageApp
+## FindPhrase-Angular2
 
 A find phrase app the basic concepts of Angular2.
 Written phrase into the search bar.Then results of phrase found in all conversation and all videos.
